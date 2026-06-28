@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Body Weather — a 21-day check-in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FCFDFD; --frost:#EEF4F4; --frost-line:#D6E3E2;
+    --sage:#8FA189; --sage-deep:#5E7058; --ink:#2B373B; --amber:#BE863C;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"EB Garamond", Georgia, serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #F4F8F8 0%, var(--paper) 60%);
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    padding:32px 20px;
+    line-height:1.5;
+  }
+  .card{ width:100%; max-width:560px; text-align:center; }
+
+  .snowdrop{ width:84px; height:auto; margin:0 auto 22px; display:block; }
+
+  .eyebrow{
+    font-size:13px; letter-spacing:.42em; text-transform:uppercase;
+    color:var(--sage-deep); font-weight:600; margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(34px, 6.5vw, 52px); font-weight:500;
+    margin:0 0 14px; letter-spacing:.01em; line-height:1.08;
+  }
+  .sub{
+    font-size:clamp(16px,2.6vw,19px); color:#3a474b;
+    max-width:430px; margin:0 auto 30px;
+  }
+
+  form{ display:flex; flex-direction:column; gap:12px; max-width:380px; margin:0 auto; }
+  input[type=email]{
+    font-family:inherit; font-size:17px; color:var(--ink);
+    padding:14px 16px; border:1px solid var(--frost-line); border-radius:10px;
+    background:#fff; text-align:center; outline:none;
+  }
+  input[type=email]:focus{ border-color:var(--sage); box-shadow:0 0 0 3px rgba(143,161,137,.18); }
+  input[type=email]::placeholder{ color:#9fb1ab; font-style:italic; }
+
+  button{
+    font-family:inherit; font-size:17px; font-weight:500; letter-spacing:.02em;
+    color:#fff; background:var(--ink); border:none; border-radius:10px;
+    padding:14px 18px; cursor:pointer; transition:background .2s ease;
+  }
+  button:hover{ background:#1f2a2e; }
+  button:focus-visible{ outline:3px solid var(--sage); outline-offset:2px; }
+
+  .micro{
+    font-size:14.5px; color:var(--sage-deep); margin:18px auto 0; max-width:360px;
+  }
+  .micro b{ font-weight:600; color:var(--ink); }
+
+  .foot{
+    margin-top:40px; font-style:italic; color:var(--sage); font-size:14px;
+  }
+
+  /* honeypot */
+  .hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+  .setup-note{
+    max-width:560px; margin:0 auto 24px; padding:10px 14px;
+    border:1px dashed #cfd9d6; border-radius:8px;
+    font-size:13px; color:#8a9a92; font-style:italic;
+  }
+
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+</style>
+</head>
+<body>
+  <main class="card">
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Body Weather — a 21-day check-in</title>
+
+<!--
+  ┌──────────────────────────────────────────────────────────────┐
+  │  BEFORE YOU PUBLISH — one thing to do (takes 2 minutes):      │
+  │                                                              │
+  │  1. In MailerLite: Forms → Embedded forms → Create.          │
+  │     Connect it to your "Body Weather 21-Day" group.          │
+  │  2. Click "Use without HTML / via API" or open the embed     │
+  │     code. Find the form ACTION url. It looks like:           │
+  │     https://assets.mailerlite.com/jsonp/XXXXXX/forms/YYYYYY/subscribe
+  │  3. Paste that url below where it says PASTE_MAILERLITE_URL.  │
+  │                                                              │
+  │  That's it. Host this file anywhere (Netlify drop, Carrd,    │
+  │  GitHub Pages) and put its link on every pin.                │
+  │  Then delete this comment and the gray note near the top.    │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FCFDFD; --frost:#EEF4F4; --frost-line:#D6E3E2;
+    --sage:#8FA189; --sage-deep:#5E7058; --ink:#2B373B; --amber:#BE863C;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"EB Garamond", Georgia, serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #F4F8F8 0%, var(--paper) 60%);
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    padding:32px 20px;
+    line-height:1.5;
+  }
+  .card{ width:100%; max-width:560px; text-align:center; }
+
+  .snowdrop{ width:84px; height:auto; margin:0 auto 22px; display:block; }
+
+  .eyebrow{
+    font-size:13px; letter-spacing:.42em; text-transform:uppercase;
+    color:var(--sage-deep); font-weight:600; margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(34px, 6.5vw, 52px); font-weight:500;
+    margin:0 0 14px; letter-spacing:.01em; line-height:1.08;
+  }
+  .sub{
+    font-size:clamp(16px,2.6vw,19px); color:#3a474b;
+    max-width:430px; margin:0 auto 30px;
+  }
+
+  form{ display:flex; flex-direction:column; gap:12px; max-width:380px; margin:0 auto; }
+  input[type=email]{
+    font-family:inherit; font-size:17px; color:var(--ink);
+    padding:14px 16px; border:1px solid var(--frost-line); border-radius:10px;
+    background:#fff; text-align:center; outline:none;
+  }
+  input[type=email]:focus{ border-color:var(--sage); box-shadow:0 0 0 3px rgba(143,161,137,.18); }
+  input[type=email]::placeholder{ color:#9fb1ab; font-style:italic; }
+
+  button{
+    font-family:inherit; font-size:17px; font-weight:500; letter-spacing:.02em;
+    color:#fff; background:var(--ink); border:none; border-radius:10px;
+    padding:14px 18px; cursor:pointer; transition:background .2s ease;
+  }
+  button:hover{ background:#1f2a2e; }
+  button:focus-visible{ outline:3px solid var(--sage); outline-offset:2px; }
+
+  .micro{
+    font-size:14.5px; color:var(--sage-deep); margin:18px auto 0; max-width:360px;
+  }
+  .micro b{ font-weight:600; color:var(--ink); }
+
+  .foot{
+    margin-top:40px; font-style:italic; color:var(--sage); font-size:14px;
+  }
+
+  /* honeypot */
+  .hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+  .setup-note{
+    max-width:560px; margin:0 auto 24px; padding:10px 14px;
+    border:1px dashed #cfd9d6; border-radius:8px;
+    font-size:13px; color:#8a9a92; font-style:italic;
+  }
+
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+</style>
+</head>
+<body>
+  <main class="card">
+
+    <!-- delete this gray note once your MailerLite url is pasted in -->
+    <p class="setup-note">Setup: paste your MailerLite form URL into the form action below, then delete this line.</p>
+
+    <svg class="snowdrop" viewBox="60 90 118 158" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M95 232 C73 198 66 166 80 136 C86 168 90 200 99 228 Z" fill="#A9C5A3"/>
+      <path d="M96 234 C96 198 99 162 105 140 C108 130 112 124 116 120" fill="none" stroke="#34614A" stroke-width="4.4" stroke-linecap="round"/>
+      <path d="M116 120 C124 112 138 112 147 125" fill="none" stroke="#34614A" stroke-width="4" stroke-linecap="round"/>
+      <path d="M116 122 C108 114 109 102 117 98 C124 104 123 116 116 122 Z" fill="#A9C5A3" stroke="#8AAE88" stroke-width="1"/>
+      <path d="M142 128 C124 140 120 162 132 178 C137 183 145 181 145 172 C141 158 140 142 142 128 Z" fill="#FCFEFC" stroke="#8FB48C" stroke-width="1.5"/>
+      <path d="M152 128 C170 140 174 162 162 178 C157 183 149 181 149 172 C153 158 154 142 152 128 Z" fill="#FCFEFC" stroke="#8FB48C" stroke-width="1.5"/>
+      <path d="M147 125 C157 134 159 158 151 176 C149 181 145 181 143 176 C135 158 137 134 147 125 Z" fill="#FFFFFF" stroke="#8FB48C" stroke-width="1.6"/>
+      <path d="M147 149 C150 154 150 162 147 167 C144 162 144 154 147 149 Z" fill="#2E5A44"/>
+      <circle cx="96" cy="237" r="7.2" fill="#D98A2B"/>
+    </svg>
+
+    <div class="eyebrow">Galanthus &middot; Thaw</div>
+    <h1>Meet yourself<br>for 21 days.</h1>
+    <p class="sub">A one-page daily check-in. One word, where it sits in the body,
+    how loud. Sixty seconds. Free.</p>
+
+    <!-- ↓↓↓ paste your MailerLite form URL in the action="" below ↓↓↓ -->
+    <form action="PASTE_MAILERLITE_URL" method="post" target="_blank">
+      <!-- honeypot: leave empty, blocks bots -->
+      <input class="hp" type="text" name="b_email" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="email" name="fields[email]" placeholder="your email" required>
+      <button type="submit">Send me the page</button>
+    </form>
+    <!-- ↑↑↑ MailerLite uses the field name fields[email] — keep it as-is ↑↑↑ -->
+
+    <p class="micro">No streaks, no pressure. Finish the 21 days and the
+    <b>Thaw deck</b> is yours, free.</p>
+
+    <p class="foot">Galanthus nivalis &mdash; the snowdrop: hope, and consolation.</p>
+
+  </main>
+</body>
+</html>
+    <p class="setup-note">Setup: paste your MailerLite form URL into the form action below, then delete this line.</p>
+
+    <svg class="snowdrop" viewBox="60 90 118 158" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M95 232 C73 198 66 166 80 136 C86 168 90 200 99 228 Z" fill="#A9C5A3"/>
+      <path d="M96 234 C96 198 99 162 105 140 C108 130 112 124 116 120" fill="none" stroke="#34614A" stroke-width="4.4" stroke-linecap="round"/>
+      <path d="M116 120 C124 112 138 112 147 125" fill="none" stroke="#34614A" stroke-width="4" stroke-linecap="round"/>
+      <path d="M116 122 C108 114 109 102 117 98 C124 104 123 116 116 122 Z" fill="#A9C5A3" stroke="#8AAE88" stroke-width="1"/>
+      <path d="M142 128 C124 140 120 162 132 178 C137 183 145 181 145 172 C141 158 140 142 142 128 Z" fill="#FCFEFC" stroke="#8FB48C" stroke-width="1.5"/>
+      <path d="M152 128 C170 140 174 162 162 178 C157 183 149 181 149 172 C153 158 154 142 152 128 Z" fill="#FCFEFC" stroke="#8FB48C" stroke-width="1.5"/>
+      <path d="M147 125 C157 134 159 158 151 176 C149 181 145 181 143 176 C135 158 137 134 147 125 Z" fill="#FFFFFF" stroke="#8FB48C" stroke-width="1.6"/>
+      <path d="M147 149 C150 154 150 162 147 167 C144 162 144 154 147 149 Z" fill="#2E5A44"/>
+      <circle cx="96" cy="237" r="7.2" fill="#D98A2B"/>
+    </svg>
+
+    <div class="eyebrow">Galanthus &middot; Thaw</div>
+    <h1>Meet yourself<br>for 21 days.</h1>
+    <p class="sub">A one-page daily check-in. One word, where it sits in the body,
+    how loud. Sixty seconds. Free.</p>
+
+    <!-- ↓↓↓ paste your MailerLite form URL in the action="" below ↓↓↓ -->
+    <form action="PASTE_MAILERLITE_URL" method="post" target="_blank">
+      <!-- honeypot: leave empty, blocks bots -->
+      <input class="hp" type="text" name="b_email" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="email" name="fields[email]" placeholder="your email" required>
+      <button type="submit">Send me the page</button>
+    </form>
+    <!-- ↑↑↑ MailerLite uses the field name fields[email] — keep it as-is ↑↑↑ -->
+
+    <p class="micro">No streaks, no pressure. Finish the 21 days and the
+    <b>Thaw deck</b> is yours, free.</p>
+
+    <p class="foot">Galanthus nivalis &mdash; the snowdrop: hope, and consolation.</p>
+
+  </main>
+</body>
+</html>
